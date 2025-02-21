@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 926px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    height: 926px;
+    max-height: 926px;
+    width: 428px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: 97%;
+    width: 92.5%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.81%
+}
+
+
+
+
+.date {
+    height: 5.2%;
+    width: 100%;
+}
+
+
+
+
+.search {
+    width: 100%;
+    height: 5.4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.search-field__icon {
+    position: absolute;
+    left: 90%;
+}
+
+#searchInput {
+    height: 100%;
+    width: 100%;
+    background-color: #1D1B2014;
+    border-radius: 2rem;
+    padding-left: 2%;
+}
+
+
+
+
+.filters {
+    height: 4.5%;
+    width: 100%;
+    display: flex;
+}
+
+#buttonLeft {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background-color: transparent;
+}
+
+#midButton {
+    background-color: transparent;
+}
+
+#buttonRight {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color: transparent;
+}
+
+.filterButton {
+    height: 100%;
+    width: 33.5%;
+    border: 2px solid #79747E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+
+.split-button__button-icon {
+    display: none;
+}
+
+#buttonLeft:focus-within {
+    background-color: #E8DEF8;
+}
+
+#midButton:focus-within {
+    background-color: #E8DEF8;
+}
+
+#buttonRight:focus-within {
+    background-color: #E8DEF8;
+}
+
+#buttonLeft:focus-within .split-button__button-icon {
+    display: inline-block; 
+}
+
+#buttonRight:focus-within .split-button__button-icon {
+    display: inline-block;
+}
+
+#midButton:focus-within .split-button__button-icon {
+    display: inline-block;
+}
+
+
+
+
+.list {
+    height: 78.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.72%;
+}
+
+.toDoBlock {
+    height: 5.9%;
+    width: 95%;
+    background-color: #F7F2FA;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.02%;
+    border-radius: 1rem;
+    position: relative;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toDoCheckbox {
+    margin-left: 2.02%;
+    height: 39.03%;
+    width: 4.55%;
+    background-color: #FFFFFF;
+    border: 2px solid #49454F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+
+.button-icon {
+    font-size: 1.1em;
+    font-weight: 700;
+    display: none;
+} 
+
+.toDoCheckbox.active{
+    background-color: #D0BCFF;
+    border: none;
+}
+
+.toDoCheckbox.active .button-icon{
+    display: inline-block;
+    color: #381E72;;
+}
+
+.toDoCheckbox.active .toDoBlockDate {
+    color: #9F9CA2;
+    text-decoration: line-through;
+}
+
+.deleteButton {
+    height: 70%;
+    width: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #F7F2FA;
+    position: absolute;
+    left: 90%;
+}
+
+#addNotesButton {
+    position: fixed;
+    height: 56px;
+    width: 56px;
+    bottom: 8%;
+    background-color: #EBDEF7;
+    border-radius: 1rem;
+    border: 0px;
+    align-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#transparentBackGround {
+    height: 926px;
+    max-height: 926px;
+    width: 428px;
+    background-color: #ADAAAD;
+    opacity: 0.5;
+    position: fixed;
+    display: none;
+}
+
+#addNotesDiv {
+    height: 328px;
+    width: 428px;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    position: fixed;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    transition: bottom 0.4s ease-in-out;
+}
+
+#addNotesDiv.visible {
+    bottom: 0%;
+}
+
+.lineDiv {
+    height: 36px;
+    width: 396px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    height: 4px;
+    width: 32px;
+    background-color: #79747E;
+    border-radius: 8px;
+}
+
+.addNotesInput {
+    height: 56px;
+    width: 396px;
+    border-radius: 4px;
+}
+
+.addNotesButtonsDiv {
+    height: 40px;
+    width: 396px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 8px;
+}
+
+#addButton {
+    width: 113px;
+    background-color: #6750A4;
+    color: #FFFFFF;
+    transition: background-color 0.3s;
+}
+
+#addButton:hover {
+    background-color: #4f3a87;
+}
+
+#cancelButton {
+    width: 99px;
+    background-color: #FFFFFF;
+    border: 1px solid #6750A4;
+    color: #6750A4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#cancelButton:hover {
+    background-color: #6750A4;
+    color: white;
+}
+
+.addNotesButtons {
+    border: none;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.rememberMeDiv {
+    height: 32px;
+    width: 396px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switchDiv {
+    width: 44px;
+    height: 28px;
+    background-color: #6750A4;
+    border-radius: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+} 
+
+.switch {
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    border: none;
+    margin: 0 2px;
+}
+
+.switchDiv.active {
+    background-color: #381E72;
+}
+
+.switchDiv.active .switch {
+    transform: translateX(16px);
+}
+
+.switchButtonIcon {
+    display: none;
+}
+
+.switchDiv.active .switchButtonIcon {
+display: inline-block;
+}
+
+.deleteButton {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #B00020;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.deleteButton:hover {
+    color: #D32F2F;
+}
+
+.toDoBlock.removing {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+}

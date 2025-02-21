@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="date">
+                <h2>Среда</h2>
+                <p>3 января</p>
+            </div>
+
+            <div class="search">
+                <input id="searchInput" type="text" placeholder="Поиск">
+
+                <span class="search-field__icon material-symbols-rounded">
+                    search
+                </span>
+ 
+            </div>
+
+            <div class="filters">
+                <button class="filterButton" id="buttonLeft">
+                    <span class="material-symbols-rounded split-button__button-icon">
+                        check
+                    </span>
+                    Все
+                </button>
+
+                <button class="filterButton" id="midButton">
+                    <span class="material-symbols-rounded split-button__button-icon">
+                        check
+                    </span>
+                    Активные
+                </button>
+
+                <button class="filterButton" id="buttonRight">
+                    <span class="material-symbols-rounded split-button__button-icon">
+                        check
+                    </span>
+                    Завершенные
+                </button>
+            </div>
+
+            <div class="list">
+
+                <div class="toDoBlock">
+                    <button class="toDoCheckbox">
+                        <span class="material-symbols-rounded button-icon">check</span>
+                    </button>
+                    
+                    <div class="toDoBlockData">
+                        <p class="toDoBlockDate">10 января, 11:30</p>
+                        <p class="toDoBlockTitle">Покормить кошку</p>
+                    </div>
+                    
+                    <button class="deleteButton">
+                        <span class="material-symbols-outlined deleteicon">
+                            close
+                        </span>
+                    </button>
+                </div>
+
+                <div class="toDoBlock">
+                    <button class="toDoCheckbox">
+                        <span class="material-symbols-rounded button-icon">check</span>
+                    </button>
+                
+                    <div class="toDoBlockData">
+                        <p class="toDoBlockDate">10 января, 11:30</p>
+                        <p class="toDoBlockTitle">Покормить кошку</p>
+                    </div>
+
+                    <button class="deleteButton">
+                        <span class="material-symbols-outlined deleteicon">
+                            close
+                        </span>
+                    </button>
+                </div>
+
+                <div class="toDoBlock">
+                    <button class="toDoCheckbox">
+                        <span class="material-symbols-rounded button-icon">check</span>
+                    </button>
+                
+                    <div class="toDoBlockData">
+                        <p class="toDoBlockDate">10 января, 11:30</p>
+                        <p class="toDoBlockTitle">Покормить кошку</p>
+                    </div>
+
+                    <button class="deleteButton">
+                        <span class="material-symbols-outlined deleteicon">
+                            close
+                        </span>
+                    </button>
+                </div>
+
+                <div class="toDoBlock">
+                    <button class="toDoCheckbox">
+                        <span class="material-symbols-rounded button-icon">check</span>
+                    </button>
+                
+                    <div class="toDoBlockData">
+                        <p class="toDoBlockDate">10 января, 11:30</p>
+                        <p class="toDoBlockTitle">Покормить кошку</p>
+                    </div>
+
+                    <button class="deleteButton">
+                        <span class="material-symbols-outlined deleteicon">
+                            close
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <button id="addNotesButton">
+                <span class="material-symbols-rounded"> edit</span>
+            </button>
+
+            
+            
+            
+
+        </div>
+        <div id="transparentBackGround">
+        
+        </div>
+
+        <div id="addNotesDiv">
+            <div class="lineDiv">
+                <div class="line"></div>
+            </div>
+
+            <input type="text" placeholder="Описание" class="addNotesInput" id="addNoteName"> 
+            <input type="datetime-local" class="addNotesInput" id="addNoteDate">
+
+            <div class="rememberMeDiv">
+                <p class="rememberMeText">Напомнить мне</p>
+
+                <div class="switchDiv">
+                    <button class="switch">
+                        <span class="material-symbols-rounded switchButtonIcon">check</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="addNotesButtonsDiv">
+                <button id="addButton" class="addNotesButtons">Добавить</button>
+                <button id="cancelButton" class="addNotesButtons">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="scripts/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@latest"></script>
+
+</body>
+</html>
